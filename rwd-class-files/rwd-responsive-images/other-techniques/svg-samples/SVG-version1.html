@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<svg height="400" width="500">
+<defs>
+	<linearGradient id="redGreenGradient">
+		<stop offset="0%" stop-color="#ff0000" />
+		<stop offset="100%" stop-color="#00ff00" />
+	</linearGradient>
+</defs>
+
+<g transform="translate(50,0), rotate(45), scale(0.75)" id="shapeGroup">
+	<rect x="5" y="5" width="300" height="100" stroke="red" fill="#ccc" />
+	<circle cx="60" cy="60" r="50" stroke="blue" stroke-width="4" />
+</g>
+<rect x="50" y="50" width="200" height="100" stroke="black"
+ fill="url(#redGreenGradient)" />
+</svg>
+</body>
+</html>

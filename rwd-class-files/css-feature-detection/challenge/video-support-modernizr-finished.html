@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Video Support Modernizr</title>
+	<script src='../libs/modernizr-build-finished.js'></script>
+	<script>
+		if (Modernizr.video) {
+			// let's play some video! but what kind?
+			if (Modernizr.video.webm) {
+				console.log('you can play webM');
+				// try WebM
+			} if (Modernizr.video.ogg) {
+				console.log('you can play ogg');
+				// try Ogg Theora + Vorbis in an Ogg container
+			} if (Modernizr.video.h264){
+				console.log('you can play h264');
+				// try H.264 video + AAC audio in an MP4 container
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

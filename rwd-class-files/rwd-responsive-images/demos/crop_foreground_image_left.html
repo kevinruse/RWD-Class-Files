@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Responsive Images: Cropping a Foreground Image from the Left</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, sans-serif;
+}
+div#foreground {
+	overflow: hidden;
+	width: 50%;
+	height: 768px;
+	border: 2px solid #000;
+}
+div#foreground img {
+	float: right;
+}
+</style>
+</head>
+
+<body>
+<p>The image as a img element in the HTML:</p>
+<div id="foreground">
+	<img src="../images/Yosemite.jpg" width="1024" height="768">
+</div>
+</body>
+</html>

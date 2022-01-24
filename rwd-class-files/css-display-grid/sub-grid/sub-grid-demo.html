@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sub-Grid Demo</title>
+    <style>
+        div, section {
+            outline: 1px solid #000;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            outline: 1px solid #000;
+        }
+
+        .item {
+            grid-column: 2 / 4;
+            grid-row: 2;
+            background-color: #abdde5;
+            display: grid;
+
+            /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+        }
+        .aaa {
+            background-color: lightgreen;
+            grid-column: 2/4;
+        }
+
+    </style>
+</head>
+<body>
+<div class="grid">
+    <section>
+        <h1>Row 1 - Column 1</h1>
+    </section>
+    <!--step 1 add item class to row 1 column 2-->
+    <section class="item">
+        <h1>Row 1 - Column 2</h1>
+        <span class="aaa">I'm in a nested grid</span>
+    </section>
+    <section>
+        <h1>Row 1 - Column 3</h1>
+    </section>
+    <section>
+        <h1>Row 1 - Column 4</h1>
+    </section>
+    <section>
+        <h1>Row 2 - Column 1</h1>
+    </section>
+    <section>
+        <h1>Row 2 - Column 2</h1>
+    </section>
+    <section>
+        <h1>Row 2 - Column 3</h1>
+    </section>
+    <section>
+        <h1>Row 2 - Column 4</h1>
+    </section>
+</div>
+</body>
+</html>

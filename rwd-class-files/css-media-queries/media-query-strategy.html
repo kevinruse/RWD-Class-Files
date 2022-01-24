@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--iOS specific meta data-->
+    <!-- web links on home screen (home screen icons) -->
+    <link rel="apple-touch-icon" href="../assets/images/icons/touch-icon-iphone.png">
+    <!-- For first-generation iPad: -->
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/icons/touch-icon-ipad.png">
+    <!-- For iPhone 4+ with high-resolution Retina display: -->
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/icons/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/icons/touch-icon-ipad-retina.png">
+    <!-- startup screen -->
+    <link rel="apple-touch-startup-image" href="../assets/images/icons/startup.png">
+    <!-- hide browser UI components (user must add app to homescreen) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- For nokia devices: -->
+    <link rel="shortcut icon" href="../assets/images/icons/icons-57.png">
+    <!-- minimize the status bar that is displayed at the top of the screen on iOS -->
+    <!--black-translucent: web content is displayed on the entire screen, partially obscured by the status bar-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--disables automatic detection of possible phone numbers-->
+    <meta name="format-detection" content="telephone=no">
+
+    <!--minimal-ui to hide UI components iOS 7+-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+
+    <!-- hide ui components for Windows Phone and Blackberry -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <!--fav icon-->
+    <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png">
+    <link rel="SHORTCUT ICON" href="http://www.kevinruse.com/favicon.ico">
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="mq.css">
+
+    <!--Hides the mobile browser's address bar after page load-->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() { window.scrollTo(0, 1); }, 1);
+        }, false);
+    </script>
+    <title>mediaQuery-1</title>
+</head>
+<body>
+<header>
+    <img id="logo" src="../assets/images/MyFoodPlate_logo.png" alt="Food Plate Logo" class="pull-left">
+    <nav id="helpSearch" class="pull-right">
+        <ul>
+            <li><a href="#" class="text-white">Help</a></li>
+            <li><a href="#" class="text-white">Search Tips</a> </li>
+        </ul>
+        <form id="searchForm">
+            <input type="text" placeholder="Search">
+        </form>
+    </nav>
+</header>
+
+
+</body>
+</html>

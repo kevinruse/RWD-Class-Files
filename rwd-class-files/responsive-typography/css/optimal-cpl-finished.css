@@ -1,0 +1,94 @@
+:root {
+    font-family: "Arial, Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00b6f1;
+}
+
+#wrapper {
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00b6f1;
+    background-image:url(../../assets/images/backgroundImages/circle1.png) , url(../../assets/images/backgroundImages/circle2.png);
+    background-position: -42px -42px, -132px -132px;
+    background-repeat: repeat, repeat;
+    text-align: center;
+    box-shadow:inset 0 0 95px rgba(0,0,0,.70);
+}
+main {
+    /*calculated width based on optimal number of characters per line*/
+    width: calc(66 * (2vw/2.26));
+    font-size: 2vw;
+    margin: 0 auto;
+    margin-bottom: 15%;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 2.5em;
+}
+
+@media (max-width: 360px) {
+    main {
+        width: 300px;
+        margin: 0 auto;
+    }
+    main p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 580px) {
+    main {
+        width: calc(66 * (3vw/2.26));
+    }
+    main p {
+    font-size: 3vw;
+    }
+}
+
+main p {
+
+    padding: 0 1em;
+    text-align: left;
+    line-height: 145%;
+}
+
+
+#subtitle {
+    height: 30px;
+    width: 200px;
+    min-width: 200px;
+    margin: 0 auto;
+    background-color: #fdb813;
+    border:1px #734ca7 solid;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+#subtitle h2 {
+    line-height: 14px;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*
+@media (min-width: 400px) and (max-width: 800px){
+    :root {
+        font-size: calc(12px + (24 - 12) * ( (100vw - 400px) / ( 1200 - 400)));
+    }
+}
+
+@media screen and (min-width : 800px) {
+    :root {
+        font-size:24px;
+    }
+}
+*/

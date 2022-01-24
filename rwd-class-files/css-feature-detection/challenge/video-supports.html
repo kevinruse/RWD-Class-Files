@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Video Support</title>
+	<script>
+
+		function isVideoH264Supported() {
+			let videoElement = document.createElement('video');
+			if (!videoElement.canPlayType) {
+				return false;
+			}
+			return videoElement.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+		}
+
+		function isOggTheoraSupported() {
+			let videoElement = document.createElement('video');
+			if (!videoElement.canPlayType) {
+				return false;
+			}
+			return videoElement.canPlayType('video/ogg; codecs="theora, vorbis"');
+		}
+
+		function isWebmSupported() {
+			let videoElement = document.createElement('video');
+			if (!videoElement.canPlayType) {
+				return false;
+			}
+			return videoElement.canPlayType('video/webm; codecs="vp8, vorbis"');
+		}
+
+		let h264Support = isVideoH264Supported();
+		let oggTheoraSupport = isOggTheoraSupported();
+		let webMSupport = isWebmSupported();
+
+	</script>
+</head>
+<body>
+<p>MP4 (codecs: avc1.42E01E, mp4a.40.2): <span id='h264Supported'></span></p>
+
+<p>Ogg Theora (codecs: theora, vorbis): <span id='oggTheoraSupported'></span></p>
+
+<p>WebM (codecs vp8, vorbis): <span id='webMSupported'></span></p>
+
+<script>
+	document.getElementById('h264Supported').innerText = h264Support;
+	document.getElementById('oggTheoraSupported').innerText = oggTheoraSupport;
+	document.getElementById(('webMSupported')).innerText = webMSupport;
+</script>
+</body>
+</html>

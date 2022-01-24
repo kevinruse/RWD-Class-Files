@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap CDN-finished-v5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+	        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+	        crossorigin="anonymous"></script>
+	<style>
+		div {
+			width: 450px;
+		}
+	</style>
+
+</head>
+<body>
+<h1>Acquiring Bootstrap from a Content Delivery Network (CDN)</h1>
+<p>Acquiring Bootstrap from a CDN provides some benefits as well as some limitations:</p>
+<ul>
+	<li>The CDN delivers a pure CSS file, therefore, there is no opportunity for preprocessing CSS.</li>
+	<li>There may (or may not: you have to test!) be longer load times.</li>
+	<li>There will be no Bootstrap customization opportunities.</li>
+	<li>The Bootstrap library located at the CDN may have been cached by your user, resulting in a faster startup
+		time.
+	</li>
+</ul>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	<strong>That was easy!</strong> You just added an alert box with a close button. Click the button to dismiss the
+	alert.
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+</body>
+</html>

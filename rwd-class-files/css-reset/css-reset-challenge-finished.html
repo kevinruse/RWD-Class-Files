@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Reset Challenge - finished</title>
+    <style>
+        /* reset */
+        :root {
+            --margin-reset: 0;
+            --padding-reset: 0;
+            --sectionBox-paddingTop: 4%;
+            --sectionBox-paddingBottom: 2%;
+        }
+        html {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        body {
+            margin: var(--margin-reset);
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            font-weight: normal;
+            margin: var(--margin-reset);
+            padding: var(--padding-reset);
+        }
+
+        .boxSection {
+            width: 500px;
+            border: 1px solid #000;
+            margin: 1em;
+            padding: .25em 1em;
+        }
+
+        .boxSection>:matches(h1, h2, h3,h4, h5, h6) {
+            color: red;
+            font-weight: bold;
+            padding-top: var(--sectionBox-paddingTop);
+            padding-bottom: 2%;
+        }
+        .boxSection>p {
+            padding-bottom: var(--sectionBox-paddingTop);
+        }
+    </style>
+</head>
+<body>
+<section class="boxSection">
+    <h1>CSS Reset Challenge</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at deserunt, dicta error fugiat, id impedit incidunt inventore minima nesciunt nulla perferendis perspiciatis provident qui repudiandae sed sit voluptatibus!</p>
+</section>
+<section class="boxSection">
+    <h3>CSS Reset Details</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at deserunt, dicta error fugiat, id impedit incidunt inventore minima nesciunt nulla perferendis perspiciatis provident qui repudiandae sed sit voluptatibus!</p>
+</section>
+<section class="boxSection">
+    <h4>CSS Reset Details</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at deserunt, dicta error fugiat, id impedit incidunt inventore minima nesciunt nulla perferendis perspiciatis provident qui repudiandae sed sit voluptatibus!</p>
+</section>
+
+</body>
+
+</html>

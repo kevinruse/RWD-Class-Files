@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap Grid Challenge-starter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+	<style>
+		.brandBanner {
+			border: 1px solid #666;
+			background: linear-gradient(#1c2a16, #993, #1c2a16);
+		}
+
+		#footerTitle {
+			background-color: #5B6224;
+			color: #fff;
+		}
+
+		#help-search * {
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<div id="wrapper" class="ADD-CLASS-HERE">
+	<header id="brand" class="ADD-CLASS-HERE brandBanner justify-content-between p-3 pb-4">
+		<img id="logo" src="../assets/images/MyFoodPlate_logo.png" alt="Food Plate Logo"/>
+		<nav id="help-search">
+			<ul>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Search Tips</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="ADD-CLASS-HERE" style="padding: 1em;">
+		<section id="mainContentGraphic">
+			<img src="../assets/images/backgroundImages/mainContentGraphic-transparent.png">
+		</section>
+		<main class="ADD-CLASS-HERE">
+			<h2>My Food Plate</h2>
+			<p>MyPlate is a reminder to find your healthy eating style and build it throughout your lifetime. Everything
+				you eat and drink matters. The right mix can help you be healthier now and in the future. This
+				means:</p>
+			<ul>
+				<li>Focus on variety, amount, and nutrition.</li>
+				<li>Choose foods and beverages with less saturated fat, sodium, and added sugars.</li>
+				<li>Start with small changes to build healthier eating styles.</li>
+				<li>Support healthy eating for everyone.</li>
+			</ul>
+			<p> Eating healthy is a journey shaped by many factors, including our stage of life, situations,
+				preferences, access to food, culture, traditions, and the personal decisions we make over time. All your
+				food and beverage choices count. MyPlate offers ideas and tips to help you create a healthier eating
+				style that meets your individual needs and improves your health.</p>
+			<a href="http://www.choosemyplate.gov/MyPlate#sthash.TOpnkyE4.dpuf">Read More at ChooseMyPlate.gov</a>
+		</main>
+	</div>
+
+	<footer class="ADD-CLASS-HERE">
+		<h2 id="footerTitle" class="ADD-CLASS-HERE border-top border-bottom text-center" style="padding: .25em;">Food
+			Plate Information</h2>
+		<section id="foodGroups" class="ADD-CLASS-HERE">
+			<h5>Food Groups</h5>
+		</section>
+		<section id="printedMaterials" class="ADD-CLASS-HERE">
+			<h5>Printed Materials & Ordering</h5>
+		</section>
+		<section id="relatedResources" class="ADD-CLASS-HERE">
+			<h5>Related Resources</h5>
+		</section>
+		<section id="addlInfo" class="ADD-CLASS-HERE">
+			<h5>Additional Information</h5>
+		</section>
+	</footer>
+</div>
+
+<script src="bootstrap-dependencies/jquery-3.3.1.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

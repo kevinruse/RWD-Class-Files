@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flexbox-demo - finished</title>
+<style>
+#flexContainer {
+	display: flex;
+	background-color: #FF9;	
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-end;
+	height: 150px;
+}
+#flexContainer>* {
+	padding: 10px;
+}
+#flexItem1 {
+	background-color: #9F3;
+	/*flex-basis: 125px;*/
+	align-self: stretch;
+}
+#flexItem2 {
+	background-color: #99F;
+	align-self: flex-end;
+}
+#flexItem3 {
+	background-color: #F96;
+	align-self: flex-start;
+}
+div p {
+	margin: 0;
+	padding: 0;
+	background-color: #993;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="flexContainer">
+		<div id="flexItem1" class="tall">Div: Flex Item 1</div>
+		<div id="flexItem2" class="tall">Div: Flex Item 2</div>
+		<div id="flexItem3" class="tall">Div: Flex Item 3</div>
+		<p class="tall">Paragraph: Flex Item</p>
+	</div>
+</body>
+</html>

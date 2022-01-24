@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lazy-Load Images - finished</title>
+    <link rel="icon" type="image/png" href="../../assets/images/kra-logo.ico" />
+    <style>
+        html {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        img {
+            display: block;
+            margin: 0 4em;
+        }
+        header {
+            width: 25em;
+        }
+        section {
+            width: 20em;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let lazyloadImages = document.querySelectorAll("img.lazy");
+            let lazyloadThrottleTimeout;
+
+            function lazyload () {
+                if(lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function() {
+                    let scrollTop = window.pageYOffset;
+                    lazyloadImages.forEach(function(img) {
+                        if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        }
+                    });
+                    if(lazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                    }
+                }, 20);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+        });
+    </script>
+</head>
+<body>
+<header>
+    <h1>Lazy Loading Images</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+</header>
+<section>
+<img src="../../assets/images/broccoli.jpg">
+<p>Image of Broccoli</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+<img src="../../assets/images/brownrice.jpg">
+<p>Image of Brown Rice</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+<img class="lazy" data-src="../../assets/images/cantaloupe.jpg">
+<p>Image of Cantalope</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+<img class="lazy" data-src="../../assets/images/chicken.jpg">
+<p>Image of Chicken</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+<img class="lazy" data-src="../../assets/images/yogurt.jpg">
+<p>Image of Yogurt</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+<img class="lazy" data-src="../../assets/images/pizza.jpg">
+<p>Image of Pizza</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus dicta eum expedita id nemo nobis odit perferendis quaerat vel. Ad placeat, soluta. Commodi enim illo neque, quisquam velit voluptas!</p>
+</section>
+</body>
+</html>

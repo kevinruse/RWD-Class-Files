@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Columns to rows - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		tr, td, th {
+			border: 1px solid #000;
+		}
+		@media only screen and (max-width: 320px) {
+			table, thead, tbody, th, td, tr {
+				display: block;
+			}
+			/* Hide table headers: accessible*/
+			thead tr {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+			tr { border: 1px solid #ccc; }
+			td {
+				/* turn into rows */
+				border: none;
+				border-bottom: 1px solid #eee;
+				position: relative;
+				padding-left: 50%;
+				white-space: normal;
+				text-align:left;
+			}
+
+			td:before {
+				/* make the new table header */
+				position: absolute;
+				/* Top/left values mimic padding */
+				top: 6px;
+				left: 6px;
+				width: 45%;
+				padding-right: 10px;
+				white-space: nowrap;
+				text-align:left;
+				font-weight: bold;
+				/* Label the table data */
+				content: attr(aria-label);
+			}
+	</style>
+</head>
+<body>
+<table>
+	<thead>
+	<tr>
+		<th>Item</th>
+		<th>Food</th>
+		<th>kCal</th>
+		<th>kJ</th>
+		<th>Water</th>
+		<th>Protein</th>
+		<th>Carb</th>
+		<th>Sugars</th>
+		<th>Fat</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td aria-label="Item">1</td>
+		<td aria-label="Food">Adzuki</td>
+		<td aria-label="kCal">131</td>
+		<td aria-label="kJ">548</td>
+		<td aria-label="Water">65.9</td>
+		<td aria-label="Protein">7.2</td>
+		<td aria-label="Carb">24.8</td>
+		<td aria-label="Sugars">&nbsp;</td>
+		<td aria-label="Fat">0.1</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">2</td>
+		<td aria-label="Food">Alaska pollak</td>
+		<td aria-label="kCal">75</td>
+		<td aria-label="kJ">314</td>
+		<td aria-label="Water">81.5</td>
+		<td aria-label="Protein">16.7</td>
+		<td aria-label="Carb">0.0</td>
+		<td aria-label="Sugars">0.0</td>
+		<td aria-label="Fat">0.8</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">3</td>
+		<td aria-label="Food">Alfalfa</td>
+		<td aria-label="kCal">43</td>
+		<td aria-label="kJ">181</td>
+		<td aria-label="Water">87.9</td>
+		<td aria-label="Protein">4.1</td>
+		<td aria-label="Carb">3.9</td>
+		<td aria-label="Sugars">&nbsp;</td>
+		<td aria-label="Fat">0.7</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">4</td>
+		<td aria-label="Food">Almond paste</td>
+		<td aria-label="kCal">445</td>
+		<td aria-label="kJ">1860</td>
+		<td aria-label="Water">15.0</td>
+		<td aria-label="Protein">10.0</td>
+		<td aria-label="Carb">43.5</td>
+		<td aria-label="Sugars">41.0</td>
+		<td aria-label="Fat">24.5</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">5</td>
+		<td aria-label="Food">Almond, oil</td>
+		<td aria-label="kCal">882</td>
+		<td aria-label="kJ">3687</td>
+		<td aria-label="Water">0.2</td>
+		<td aria-label="Protein">0.0</td>
+		<td aria-label="Carb">0.0</td>
+		<td aria-label="Sugars">0.0</td>
+		<td aria-label="Fat">99.8</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">6</td>
+		<td aria-label="Food">Almonds</td>
+		<td aria-label="kCal">583</td>
+		<td aria-label="kJ">2437</td>
+		<td aria-label="Water">10.7</td>
+		<td aria-label="Protein">19.5</td>
+		<td aria-label="Carb">6.2</td>
+		<td aria-label="Sugars">3.1</td>
+		<td aria-label="Fat">52.0</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">7</td>
+		<td aria-label="Food">Anchovy</td>
+		<td aria-label="kCal">102</td>
+		<td aria-label="kJ">427</td>
+		<td aria-label="Water">76.6</td>
+		<td aria-label="Protein">20.1</td>
+		<td aria-label="Carb">0.0</td>
+		<td aria-label="Sugars">0.0</td>
+		<td aria-label="Fat">2.3</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">8</td>
+		<td aria-label="Food">Anise Seed</td>
+		<td aria-label="kCal">425</td>
+		<td aria-label="kJ">1777</td>
+		<td aria-label="Water">4.0</td>
+		<td aria-label="Protein">10.0</td>
+		<td aria-label="Carb">55.0</td>
+		<td aria-label="Sugars">&nbsp;</td>
+		<td aria-label="Fat">15.0</td>
+	</tr>
+	<tr>
+		<td aria-label="Item">9</td>
+		<td aria-label="Food">Apple cider</td>
+		<td aria-label="kCal">10</td>
+		<td aria-label="kJ">42</td>
+		<td aria-label="Water">96.5</td>
+		<td aria-label="Protein">0.0</td>
+		<td aria-label="Carb">2.5</td>
+		<td aria-label="Sugars">2.5</td>
+		<td aria-label="Fat">0.0</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

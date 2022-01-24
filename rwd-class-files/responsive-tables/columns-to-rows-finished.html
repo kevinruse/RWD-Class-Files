@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Columns to rows - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		tr, td, th {
+			border: 1px solid #000;
+		}
+		@media only screen and (max-width: 320px) {
+			table, thead, tbody, th, td, tr {
+				display: block;
+			}
+			/* Hide table headers: accessible*/
+			thead tr {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+			tr { border: 1px solid #ccc; }
+			td {
+				/* turn into rows */
+				border: none;
+				border-bottom: 1px solid #eee;
+				position: relative;
+				padding-left: 50%;
+				white-space: normal;
+				text-align:left;
+			}
+
+			td:before {
+				/* make the new table header */
+				position: absolute;
+				/* Top/left values mimic padding */
+				top: 6px;
+				left: 6px;
+				width: 45%;
+				padding-right: 10px;
+				white-space: nowrap;
+				text-align:left;
+				font-weight: bold;
+				/* Label the table data */
+				content: attr(data-row-title);
+			}
+	</style>
+</head>
+<body>
+<table>
+	<thead>
+	<tr>
+		<th>Item</th>
+		<th>Food</th>
+		<th>kCal</th>
+		<th>kJ</th>
+		<th>Water</th>
+		<th>Protein</th>
+		<th>Carb</th>
+		<th>Sugars</th>
+		<th>Fat</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td data-row-title="Item">1</td>
+		<td data-row-title="Food">Adzuki</td>
+		<td data-row-title="kCal">131</td>
+		<td data-row-title="kJ">548</td>
+		<td data-row-title="Water">65.9</td>
+		<td data-row-title="Protein">7.2</td>
+		<td data-row-title="Carb">24.8</td>
+		<td data-row-title="Sugars">&nbsp;</td>
+		<td data-row-title="Fat">0.1</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">2</td>
+		<td data-row-title="Food">Alaska pollak</td>
+		<td data-row-title="kCal">75</td>
+		<td data-row-title="kJ">314</td>
+		<td data-row-title="Water">81.5</td>
+		<td data-row-title="Protein">16.7</td>
+		<td data-row-title="Carb">0.0</td>
+		<td data-row-title="Sugars">0.0</td>
+		<td data-row-title="Fat">0.8</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">3</td>
+		<td data-row-title="Food">Alfalfa</td>
+		<td data-row-title="kCal">43</td>
+		<td data-row-title="kJ">181</td>
+		<td data-row-title="Water">87.9</td>
+		<td data-row-title="Protein">4.1</td>
+		<td data-row-title="Carb">3.9</td>
+		<td data-row-title="Sugars">&nbsp;</td>
+		<td data-row-title="Fat">0.7</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">4</td>
+		<td data-row-title="Food">Almond paste</td>
+		<td data-row-title="kCal">445</td>
+		<td data-row-title="kJ">1860</td>
+		<td data-row-title="Water">15.0</td>
+		<td data-row-title="Protein">10.0</td>
+		<td data-row-title="Carb">43.5</td>
+		<td data-row-title="Sugars">41.0</td>
+		<td data-row-title="Fat">24.5</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">5</td>
+		<td data-row-title="Food">Almond, oil</td>
+		<td data-row-title="kCal">882</td>
+		<td data-row-title="kJ">3687</td>
+		<td data-row-title="Water">0.2</td>
+		<td data-row-title="Protein">0.0</td>
+		<td data-row-title="Carb">0.0</td>
+		<td data-row-title="Sugars">0.0</td>
+		<td data-row-title="Fat">99.8</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">6</td>
+		<td data-row-title="Food">Almonds</td>
+		<td data-row-title="kCal">583</td>
+		<td data-row-title="kJ">2437</td>
+		<td data-row-title="Water">10.7</td>
+		<td data-row-title="Protein">19.5</td>
+		<td data-row-title="Carb">6.2</td>
+		<td data-row-title="Sugars">3.1</td>
+		<td data-row-title="Fat">52.0</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">7</td>
+		<td data-row-title="Food">Anchovy</td>
+		<td data-row-title="kCal">102</td>
+		<td data-row-title="kJ">427</td>
+		<td data-row-title="Water">76.6</td>
+		<td data-row-title="Protein">20.1</td>
+		<td data-row-title="Carb">0.0</td>
+		<td data-row-title="Sugars">0.0</td>
+		<td data-row-title="Fat">2.3</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">8</td>
+		<td data-row-title="Food">Anise Seed</td>
+		<td data-row-title="kCal">425</td>
+		<td data-row-title="kJ">1777</td>
+		<td data-row-title="Water">4.0</td>
+		<td data-row-title="Protein">10.0</td>
+		<td data-row-title="Carb">55.0</td>
+		<td data-row-title="Sugars">&nbsp;</td>
+		<td data-row-title="Fat">15.0</td>
+	</tr>
+	<tr>
+		<td data-row-title="Item">9</td>
+		<td data-row-title="Food">Apple cider</td>
+		<td data-row-title="kCal">10</td>
+		<td data-row-title="kJ">42</td>
+		<td data-row-title="Water">96.5</td>
+		<td data-row-title="Protein">0.0</td>
+		<td data-row-title="Carb">2.5</td>
+		<td data-row-title="Sugars">2.5</td>
+		<td data-row-title="Fat">0.0</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

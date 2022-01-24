@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fluid-Grid-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../../rwd-resources/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<style>
+		/* Large desktop */
+		@media only screen and (min-width: 980px) and (max-width: 1800px)
+		 {
+			#brandHeader {
+				border: 1px solid #000;	
+			}
+			
+			p {
+				font-size: 1.90rem;
+				line-height: 2.20rem;
+				color: #F0F;
+				}
+				
+			h1 {
+				font-size: 2.75rem;
+				line-height: 2.75rem;	
+			}
+			
+			h2 {
+				font-size: 2.45rem;	
+				line-height: 2.60rem;
+			}
+			
+			h3 {
+				font-size: 2.25rem;
+				line-height:2.45rem;	
+			}
+		}
+		/* Portrait tablet to landscape and desktop */
+		@media only screen and (min-width: 768px) and (max-width: 979px) {
+			#brandHeader {
+				border: 1px solid #000;
+				padding: 6px;	
+			}
+			
+			p {
+				font-size: 1.70rem;
+				line-height: 2.00rem;
+				color: green;
+				}
+				
+			h1 {
+				font-size: 2.5rem;
+				line-height: 2.75rem;
+			}
+			
+			h2 {
+				font-size: 2.25rem;	
+				line-height: 2.50rem;
+			}
+			
+			h3 {
+				font-size: 2.0rem;
+				line-height:2.25rem;	
+			}
+		}
+		
+		/* Landscape phone to portrait tablet */
+		@media only screen and (max-width: 767px) { 
+			p {
+				font-size: 1.45rem;
+				line-height: 2.10rem;
+				color: red;
+				}
+				
+			h1 {
+				font-size: 2.75rem;
+				line-height: 3.00rem;	
+			}
+			
+			h2 {
+				font-size: 2.25rem;	
+				line-height: 2.50rem;
+			}
+			
+			h3 {
+				font-size: 2rem;
+				line-height:2.25rem;	
+			}
+		}
+		
+		/* Landscape phones and down */
+		@media only screen and (max-width: 480px) {
+			#brandHeader {
+				border: 1px solid #000;
+			}
+			p {
+				font-size: 0.90rem;
+				line-height: 1.35rem;
+				color: blue;
+				}
+				
+			h1 {
+				font-size: 2rem;
+				line-height: 2.25rem;	
+			}
+			
+			h2 {
+				font-size: 1.75rem;	
+				line-height: 2.00rem;
+			}
+			
+			h3 {
+				font-size: 1.5rem;
+				line-height:1.75rem;	
+			}
+		}
+	</style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../responsive typography/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../responsive typography/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../responsive typography/ico/apple-touch-icon-72-precomposed.png">
+     <link rel="apple-touch-icon-precomposed" href="../../responsive typography/ico/apple-touch-icon-57-precomposed.png">
+     <link rel="shortcut icon" href="../../responsive typography/ico/favicon.png">
+
+  </head>
+
+  <body>
+  <div id="wrapper" class="container-fluid">
+	<header id="brandHeader" class="row-fluid">
+		<h1 class="span12">This is the main header</h1>
+	</header>
+	<section id="mainSection" class="row-fluid">
+		<nav class="span2">
+			<h3>Left</h3>
+				<ul>
+					<li>One</li>
+					<li>Two</li>
+					<li>Three</li>
+					<li>Four</li>
+					<li>Five</li>
+				</ul>		
+		</nav>
+		<main class="span10 clear2">
+		<h2>Main Content</h2>
+		<p>Read Main Content | Read Sub-Content</p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere felis nec tortor. Pellentesque faucibus. Ut accumsan ultricies elit. Maecenas at justo id velit placerat molestie. Donec dictum lectus non odio. Cras a ante vitae enim iaculis aliquam. Mauris nunc quam, venenatis nec, euismod sit amet, egestas placerat, est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras id elit. Integer quis urna. Ut ante enim, dapibus malesuada, fringilla eu, condimentum quis, tellus. Aenean porttitor eros vel dolor. Donec convallis pede venenatis nibh. Duis quam. Nam eget lacus. Aliquam erat volutpat. Quisque dignissim congue leo.</p>
+		<h3>Sub-Content</h3>
+		<p>Mauris vel lacus vitae felis vestibulum volutpat. Etiam est nunc, venenatis in, tristique eu, imperdiet ac, nisl. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis facilisis massa. Etiam eu urna. Sed porta. Suspendisse quam leo, molestie sed, luctus quis, feugiat in, pede. Fusce tellus. Sed metus augue, convallis et, vehicula ut, pulvinar eu, ante. Integer orci tellus, tristique vitae, consequat nec, porta vel, lectus. Nulla sit amet diam. Duis non nunc. Nulla rhoncus dictum metus. Curabitur tristique mi condimentum orci. Phasellus pellentesque aliquam enim. Proin dui lectus, cursus eu, mattis laoreet, viverra sit amet, quam. Curabitur vel dolor ultrices ipsum dictum tristique. Praesent vitae lacus. Ut velit enim, vestibulum non, fermentum nec, hendrerit quis, leo. Pellentesque rutrum malesuada neque.</p>
+		<p>Nunc tempus felis vitae urna. Vivamus porttitor, neque at volutpat rutrum, purus nisi eleifend libero, a tempus libero lectus feugiat felis. Morbi diam mauris, viverra in, gravida eu, mattis in, ante. Morbi eget arcu. Morbi porta, libero id ullamcorper nonummy, nibh ligula pulvinar metus, eget consectetuer augue nisi quis lacus. Ut ac mi quis lacus mollis aliquam. Curabitur iaculis tempus eros. Curabitur vel mi sit amet magna malesuada ultrices. Ut nisi erat, fermentum vel, congue id, euismod in, elit. Fusce ultricies, orci ac feugiat suscipit, leo massa sodales velit, et scelerisque mi tortor at ipsum. Proin orci odio, commodo ac, gravida non, tristique vel, tellus. Pellentesque nibh libero, ultricies eu, sagittis non, mollis sed, justo. Praesent metus ipsum, pulvinar pulvinar, porta id, fringilla at, est. </p>
+		</main>
+	</section>
+  </div>
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="../../responsive typography/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

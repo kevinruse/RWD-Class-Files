@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap Media Queries - Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		div {
+			outline: 1px solid #000;
+			background-color: #0ff;
+		}
+
+		section {
+			background-color: #ff0;
+		}
+
+		@media (min-width: 576px) {
+			section {
+				background-color: #f00;
+				color: #fff;
+			}
+		}
+
+		@media (min-width: 768px) {
+			section {
+				background-color: #00f;
+				color: #fff;
+			}
+		}
+
+		@media (min-width: 992px) {
+			section {
+				background-color: #551a86;
+				color: #fff;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			section {
+				background-color: #ffc0cb;
+				color: #000;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<section>Section One</section>
+</div>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
